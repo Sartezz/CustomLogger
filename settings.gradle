@@ -1,0 +1,3 @@
+include ':testlibu'
+include ':sample'
+rootProject.name = "testlib"
