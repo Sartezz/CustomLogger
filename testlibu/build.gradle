@@ -1,6 +1,8 @@
 apply plugin: 'com.android.library'
 apply plugin: 'kotlin-android'
 apply plugin: 'kotlin-android-extensions'
+apply plugin: 'com.novoda.bintray-release'
+apply plugin: 'com.android.library'
 
 android {
     compileSdkVersion 30
@@ -32,4 +34,20 @@ dependencies {
     testImplementation 'junit:junit:4.12'
     androidTestImplementation 'androidx.test.ext:junit:1.1.1'
     androidTestImplementation 'androidx.test.espresso:espresso-core:3.2.0'
+}
+
+publish {
+
+    def groupProjectID = 'com.example.testlibu'
+    def artifactProjectID = 'testlibu'
+    def publishVersionID = '0.1.0'
+
+    userOrg = 'i2levchenko'
+    repoName = 'CustomLogger'
+    groupId = groupProjectID
+    artifactId = artifactProjectID
+    publishVersion = publishVersionID
+    desc = 'Test Library'
+    website = 'https://github.com/Sartezz/CustomLogger'
+
 }
